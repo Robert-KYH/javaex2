@@ -43,7 +43,7 @@ public class Main {
         else if (värde > arr[i])  i1 = i+1;
       }
 
-      if (0 <= i  &&  i < längd  &&  arr[i] == värde)
+      if (i1 <= i2  &&  arr[i] == värde)
         System.out.println("Talet hittades på index "+i);
       else
         System.out.println("Talet finns ej");
