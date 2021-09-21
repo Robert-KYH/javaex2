@@ -14,6 +14,7 @@ public class Main {
     in = new Scanner(System.in);
 
     övn1();
+    övn2();
   }
 
 
@@ -48,4 +49,30 @@ public class Main {
         System.out.println("Talet finns ej");
     }
   }
+
+
+  //  övning 2, linjär sökning
+  public static void övn2() {
+    int längd = 1000;
+    int[] arr = new int[längd];
+    for (int i = 0; i < längd; ++i)  arr[i] = 1+(int)(Math.random()*längd*10);
+
+    System.out.println("Fältet innehåller tal från 1 till "+längd*10);
+
+    while (true) {
+      System.out.print("Sök efter ett tal, 0 för att avsluta:  ");
+      int tal = in.nextInt();
+      if (tal == 0)  break;
+
+      boolean finns = false;
+      for (int v:arr)
+        if (tal == v) {
+          finns = true;
+          break;
+        }
+
+      System.out.println(finns ? "Talet finns" : "Talet finns ej");
+    }
+  }
+
 }
